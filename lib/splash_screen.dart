@@ -22,13 +22,13 @@ class _MySplashState extends State<MySplash> {
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 25,
-          color: Color(0x00FFFF)
+          color: Colors.white.withOpacity(.7)
         ),
       ),
       image: Image.asset('assets/cat_dog_icon.png'),
-      backgroundColor: Colors.blueAccent,
+      backgroundColor: Color(0xFF7D9E9E),
       photoSize: 60,
-      loaderColor: Color(0x004242),
+      loaderColor: Color(0xFF004242),
     );
   }
 }
