@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tflite/tflite.dart';
@@ -120,7 +122,25 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     )
-                  : Container(),
+                  : Container(
+                child: Column(
+                  children: [
+                    Container(
+                      height: 250,
+                      child: Image.file(File(_image.path)),
+                    ),
+                    SizedBox(height: 20,),
+                    _output != null ? Text(
+                      '${_output[0]['label']}',
+                      style: TextStyle(
+                        color: Color(0xFF004242),
+                        fontSize: 15
+                      ),
+                    ) : Container(),
+                    SizedBox(height: 10,)
+                  ],
+                ),
+              ),
             ),
             Container(
               width: size.width,
